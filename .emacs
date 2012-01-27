@@ -35,7 +35,6 @@
 (delete-selection-mode t)
 
 (global-set-key (kbd "C-x C-g") 'magit-status)
+(global-set-key (kbd "C-x C-l") 'rgrep)
 
-        (add-to-list 'load-path "~/emacs.d/tramp")
-;        (add-to-list 'Info-default-directory-list "~/emacs/tramp/info/")
-        (require 'tramp)
+(add-to-list 'load-path "~/emacs.d/tramp")
