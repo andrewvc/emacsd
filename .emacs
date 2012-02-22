@@ -28,13 +28,31 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/gist.el")
 (require 'gist)
 
+(add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
+
 
 (setq-default indent-tabs-mode nil) 
 (setq standard-indent 2)
-
+(setq lisp-indent-offset nil)
+(setq js-indent-level 2) 
+(setq-default tab-width 2)
 (delete-selection-mode t)
 
 (global-set-key (kbd "C-x C-g") 'magit-status)
 (global-set-key (kbd "C-x C-l") 'rgrep)
 
 (add-to-list 'load-path "~/emacs.d/tramp")
+
+ (add-to-list 'load-path "~/.emacs.d/vendor/textmate.el")
+
+(require 'textmate)
+(require 'coffee-mode)
+
+(add-to-list 'load-path "~/.emacs.d/vendor/")
+
+(require 'peepopen)
+(textmate-mode)
+
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-comidia)
